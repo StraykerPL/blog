@@ -1,0 +1,26 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer>
+  <p>&copy; {currentYear} Daniel "Strayker" Nowak</p>
+  <nav aria-label="Footer">
+    <ul>
+      <li>
+        <a href="https://straykerpl.github.io" target="_blank" rel="noopener noreferrer"
+          >My Personal Site</a>
+      </li>
+      <li>
+        <a href="https://straykersoftware.pl" target="_blank" rel="noopener noreferrer"
+          >Strayker Software</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+{/* CSS required to keep footer at the bottom of the page */}
+<style>
+  footer {
+    position: sticky;
+    top: 100vh;
+  }
+</style>

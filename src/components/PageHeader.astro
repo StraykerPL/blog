@@ -1,0 +1,19 @@
+---
+import NavLink from "./NavLink.astro";
+---
+
+<header>
+  <nav aria-label="Main">
+    <ul>
+      <li>
+        <a href="/">
+          <strong>Strayker Blog</strong>
+        </a>
+      </li>
+    </ul>
+    <ul>
+      <li><NavLink path="about">About</NavLink></li>
+      <li><NavLink path="blog">Blog</NavLink></li>
+    </ul>
+  </nav>
+</header>

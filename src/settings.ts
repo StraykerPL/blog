@@ -19,10 +19,10 @@ export const siteConfig: Config = {
   description: "A place where I document my learning process and thoughs.",
   // BCP 47 language tag for the HTML lang attribute (e.g. "en", "de", "fr", "zh-TW").
   lang: "pl",
-  favicon: "/favicon.svg",
+  favicon: "/blog/favicon.svg",
   og: {
     // Replace with your own image (1200×630px recommended). Path is relative to /public.
-    image: "/ogImage.png",
+    image: "/blog/ogImage.png",
     imageAlt: "Open Graph image for the smallworld Astro template",
     imageType: "image/png",
     imageWidth: "1200",

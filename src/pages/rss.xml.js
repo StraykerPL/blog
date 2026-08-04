@@ -14,7 +14,7 @@ export async function GET(context) {
     // Blog entries
     items: posts.map((post) => ({
       ...post.data,
-      link: `/blog/${post.id}/`,
+      link: `${import.meta.env.BASE_URL}/posts/${post.id}/`,
     })),
   });
 }

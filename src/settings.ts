@@ -23,7 +23,7 @@ export const siteConfig: Config = {
   og: {
     // Replace with your own image (1200×630px recommended). Path is relative to /public.
     image: "/blog/ogImage.png",
-    imageAlt: "Open Graph image for the smallworld Astro template",
+    imageAlt: "Open Graph image for Strayker Blog",
     imageType: "image/png",
     imageWidth: "1200",
     imageHeight: "630",

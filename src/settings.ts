@@ -16,7 +16,7 @@ export const siteConfig: Config = {
   // Appears in the nav logo, browser title bar, and RSS feed title.
   title: "Strayker Blog",
   // Used as the default meta description and OG description on pages without their own.
-  description: "A place where I document my learning process and thoughs.",
+  description: "A place where I document my learning process and thoughts.",
   // BCP 47 language tag for the HTML lang attribute (e.g. "en", "de", "fr", "zh-TW").
   lang: "pl",
   favicon: "/blog/favicon.svg",

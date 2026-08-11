@@ -95,3 +95,9 @@ Here's a sentence with a footnote. [^1]
 - [x] Write the press release
 - [ ] Update the website
 - [ ] Contact the media
+
+### Links to tools/resources to write posts
+
+- [GitHub Emojis List #1](https://gist.github.com/rxaviers/7360908)
+- [GitHub Emojis List #2](https://github.com/ikatyang/emoji-cheat-sheet)
+- [Reading Time Calculator - WhyCalculator](https://whycalculator.com/reading-time-calculator/)

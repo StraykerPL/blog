@@ -23,7 +23,7 @@ Na czym pracuję poznając tajniki SSH?
 Mam postawione na lokalnym systemie dwie maszyny wirtualne: jedną gotową, pobraną z oficjalnej dystrybucji, Kali Linuxa oraz drugą stawianą od zera z Debianem bez GUI. Pierwsza służy za klienta, druga za serwer. Obie maszyny stoją na QEMU i są zarządzane przez Virt Managera. Małe majsterkowanie dokonałem w połączeniach sieciowych tych maszyn - do pierwszej, domyślnej sieci wewnętrznej Virt Managera, która stoi na NATcie i służy do łączenia się maszyn z internetem, dodałem drugą, która jest skonfigurowana na bridged network, by maszyny na wzajem się widziały. By to wszystko razem działało, dodałem do każdej z maszyn dodatkową kartę sieciową dla bridged network. Dzięki tej konfiguracji mogę swobodnie sterować dostępami do sieci dla obydwóch maszyn razem, jak i osobno. Np. domyślnie internet jest odłączony na obu maszynach, poprzez wyłączenie ich wirtualnych kart sieciowych, ustawionych na sieć NAT, ale pozostawiając samą sieć NAT włączoną, gdybym potrzebował w jakimś momencie np. doinstalować jakiś pakiet do pracy, w każdej chwili mogę włączyć dostęp.
 
 Tak to wygląda w działaniu:
-[ssh-1.png](ssh-1.png)
+![ssh-1.png](https://straykerpl.github.io/blog/ssh-1.png)
 
 Klient SSH jest domyślnie dostępny w Kalim, jak i innych dystrybucjach Linuxa, więc nie musiałem nic robić po stronie klienta. Po stronie serwera wystarczyło doinstalować paczkę: `sudo apt install openssh-server`, oraz uruchomić usługi sieciowe w systemd: `sudo systemctl enable ssh`, dzięki czemu serwer SSH będzie startował za każdym razem, kiedy uruchomię maszynę z Debianem.
 
@@ -37,7 +37,7 @@ Skoro wszystko gra i buczy, to na zakończenie pozostaje wyłączyć logowanie h
 Test tego jest prosty, user "connector" nie jest jedynym użytkownikiem na maszynie z Debianem, jest jeszcze domyślny user "debian". Dla "connectora" został dodany klucz, zaś dla "debiana" nie, więc logując się bezpośrednio z poziomu maszyny z Kalim kolejno na "debiana", potem na "connectora", serwer zwróci błąd logowania, prosząc o zmianę metody logowania na "passkey" dla pierwszego usera, zaś przy drugim zaloguje się bez problemu.
 
 A oto efekt finalny 😁
-[ssh-2.png](ssh-2.png)
+![ssh-2.png](https://straykerpl.github.io/blog/ssh-2.png)
 
 To by było na tyle w dzisiejszym wpisie. Nie wiem, czy będę jeszcze przerabiał "port forwarding" w SSH, na ten moment myślę, że nie. A nawet jeśli tak się zdarzy w przyszłości, to będzie to temat na pewno nadający się pod cały osobny wpis, więc czas pokaże. Co do hardeningu SSH i zabezpieczania dostępu do serwera, nie jest to celem mojej nauki, by umieć stawiać bezpieczną infrastrukturę sieciową samodzielnie, więc omijam na ten moment takie tematy, jak właśnie wspomniany hardening samego SSH, stawianie firewalla dla serwera czy reverse proxy do hostowania usług. Część z tego już umiem, część nie umiem, a inną część kojarzę. Na ten moment to wystarczy.
 

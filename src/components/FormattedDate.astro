@@ -15,4 +15,4 @@ const formatted = new Intl.DateTimeFormat(siteConfig.lang, {
 }).format(date);
 ---
 
-<time datetime={date.toISOString()}>{formatted}</time>
+<time class="formatted-date" datetime={date.toISOString()}>{formatted}</time>

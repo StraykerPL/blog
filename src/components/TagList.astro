@@ -8,11 +8,11 @@ type Props = {
 const { tags } = Astro.props;
 ---
 
-<nav aria-label="Tags">
-  <ul>
+<nav class="tag-list" aria-label="Tags">
+  <ul class="tag-list__items">
     {
       tags.map((tag) => (
-        <li>
+        <li class="tag-list__item">
           <TagLink tag={tag} />
         </li>
       ))

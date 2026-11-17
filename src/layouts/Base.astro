@@ -1,5 +1,5 @@
 ---
-import "@styles/main.scss";
+import "@styles/main.css";
 import { siteConfig } from "~/settings";
 
 import PageHead from "@components/PageHead.astro";
@@ -22,31 +22,12 @@ const { title, description, ogType = "website" } = Astro.props;
     description={description ? description : siteConfig.description}
     ogType={ogType}
   />
-  <body class="container">
+  <body class="site">
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <PageHeader />
-    <main id="main-content">
+    <main class="site__main" id="main-content">
       <slot />
     </main>
     <PageFooter />
   </body>
 </html>
-{/* CSS required to keep footer at the bottom of the page */}
-<style>
-  .container {
-    height: 100vh;
-  }
-  /* Visually hidden until focused — required for WCAG 2.4.1 */
-  .skip-link {
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translateY(-100%);
-    padding: 0.5rem 1rem;
-    background: var(--pico-background-color);
-    z-index: 100;
-  }
-  .skip-link:focus {
-    transform: translateY(0);
-  }
-</style>

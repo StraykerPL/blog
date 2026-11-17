@@ -8,18 +8,22 @@ type Props = CollectionEntry<"blog">["data"];
 const { title, pubDate, tags } = Astro.props;
 ---
 
-<article>
-  <header>
-    <hgroup>
-      <h1>{title}</h1>
-      <p><FormattedDate date={pubDate} /></p>
+<article class="article blog-post">
+  <header class="article__header blog-post__header">
+    <hgroup class="article__heading-group">
+      <h1 class="article__title">{title}</h1>
+      <p class="article__subtitle blog-post__date">
+        <FormattedDate date={pubDate} />
+      </p>
     </hgroup>
   </header>
-  <slot />
+  <div class="blog-post__content prose">
+    <slot />
+  </div>
 
   {
     tags && (
-      <footer>
+      <footer class="article__footer blog-post__footer">
         <TagList tags={tags} />
       </footer>
     )

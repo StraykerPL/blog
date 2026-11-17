@@ -1,0 +1,7 @@
+.home__divider {
+  height: 0;
+  margin: var(--space-text) 0;
+  border: 0;
+  border-top: 1px solid var(--color-border-muted);
+  color: inherit;
+}

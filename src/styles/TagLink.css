@@ -1,0 +1,14 @@
+.tag-link {
+  --color-text: var(--color-tag);
+  --underline: var(--color-tag-underline);
+}
+
+.tag-link:is(
+  [aria-current]:not([aria-current="false"]),
+  :hover,
+  :active,
+  :focus
+) {
+  --color-text: var(--color-tag-hover);
+  --underline: var(--color-tag-hover-underline);
+}

@@ -1,0 +1,4 @@
+/* Keep Markdown margins in the article's original formatting context. */
+.blog-post__content {
+  display: contents;
+}

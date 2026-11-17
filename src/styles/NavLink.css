@@ -1,0 +1,5 @@
+.nav-link[aria-current="page"] {
+  --color-text: var(--color-link-hover);
+  --underline: var(--color-link-hover-underline);
+  --text-decoration: underline;
+}

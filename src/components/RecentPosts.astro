@@ -9,27 +9,32 @@ const maxPostsToDisplay = 3;
 const recentPosts = posts.slice(0, maxPostsToDisplay);
 ---
 
-<section>
-  <h2>Recent posts</h2>
+<section class="recent-posts">
+  <h2 class="recent-posts__title">Recent posts</h2>
   {
     recentPosts.length > 0 ? (
-      <div>
+      <div class="recent-posts__list">
         {recentPosts.map((post) => (
-          <article>
-            <hgroup>
-              <h3>
-                <a href={`${import.meta.env.BASE_URL}/posts/${post.id}`}>{post.data.title}</a>
+          <article class="article post-card">
+            <hgroup class="article__heading-group">
+              <h3 class="article__title post-card__title">
+                <a
+                  class="post-card__link"
+                  href={`${import.meta.env.BASE_URL}/posts/${post.id}`}
+                >
+                  {post.data.title}
+                </a>
               </h3>
-              <p>
+              <p class="article__subtitle post-card__date">
                 <FormattedDate date={post.data.pubDate} />
               </p>
             </hgroup>
-            <p>{post.data.description}</p>
+            <p class="post-card__description">{post.data.description}</p>
           </article>
         ))}
       </div>
     ) : (
-      <p>No posts yet.</p>
+      <p class="recent-posts__empty">No posts yet.</p>
     )
   }
 </section>

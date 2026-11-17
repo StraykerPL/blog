@@ -1,0 +1,12 @@
+.tags-index__list {
+  margin-top: 0;
+  margin-bottom: var(--space-text);
+  color: var(--color-text);
+  font-style: normal;
+  font-weight: var(--font-weight);
+}
+
+.tags-index__item {
+  margin-bottom: calc(var(--space-text) * 0.25);
+  list-style: square;
+}

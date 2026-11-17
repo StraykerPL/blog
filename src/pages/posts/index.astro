@@ -23,25 +23,30 @@ posts.forEach((post) => {
 ---
 
 <Base title="Posts" description="List of blog posts">
-  <article>
-    <header>
-      <hgroup>
-        <h1>Posts</h1>
-        <p>Moje posty</p>
+  <article class="article posts-archive">
+    <header class="article__header">
+      <hgroup class="article__heading-group">
+        <h1 class="article__title">Posts</h1>
+        <p class="article__subtitle">Moje posty</p>
       </hgroup>
     </header>
     {
       Object.keys(postByYear)
         .sort((a, b) => parseInt(b) - parseInt(a))
         .map((year) => (
-          <section id={year}>
-            <h2>{year}</h2>
-            <ul>
+          <section class="posts-archive__year" id={year}>
+            <h2 class="posts-archive__title">{year}</h2>
+            <ul class="posts-archive__list">
               {postByYear[parseInt(year)].map((post: Post) => (
-                <li>
-                  <a href={`${import.meta.env.BASE_URL}/posts/${post.id}`}>{post.data.title}</a>
+                <li class="posts-archive__item">
+                  <a
+                    class="posts-archive__link"
+                    href={`${import.meta.env.BASE_URL}/posts/${post.id}`}
+                  >
+                    {post.data.title}
+                  </a>
                   <br />
-                  <small>
+                  <small class="posts-archive__date">
                     <FormattedDate date={post.data.pubDate} />
                   </small>
                 </li>

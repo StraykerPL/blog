@@ -2,18 +2,18 @@
 import NavLink from "./NavLink.astro";
 ---
 
-<header>
-  <nav aria-label="Main">
-    <ul>
-      <li>
+<header class="site-header">
+  <nav class="site-header__nav" aria-label="Main">
+    <ul class="site-header__list">
+      <li class="site-header__item">
         <NavLink path="">
-          <strong>Strayker Blog</strong>
+          <strong class="site-header__brand">Strayker Blog</strong>
         </NavLink>
       </li>
     </ul>
-    <ul>
-      <li><NavLink path="about">About</NavLink></li>
-      <li><NavLink path="posts">Posts</NavLink></li>
+    <ul class="site-header__list">
+      <li class="site-header__item"><NavLink path="about">About</NavLink></li>
+      <li class="site-header__item"><NavLink path="posts">Posts</NavLink></li>
     </ul>
   </nav>
 </header>

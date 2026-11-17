@@ -5,6 +5,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
 <a
+  class="nav-link"
   href={`/blog/${path}`}
   aria-current={currentPath === path || currentPath.startsWith(path + "/")
     ? "page"

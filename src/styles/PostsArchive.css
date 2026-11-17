@@ -1,0 +1,16 @@
+.posts-archive__year {
+  margin-bottom: var(--space-block);
+}
+
+.posts-archive__list {
+  margin-top: 0;
+  margin-bottom: var(--space-text);
+  color: var(--color-text);
+  font-style: normal;
+  font-weight: var(--font-weight);
+}
+
+.posts-archive__item {
+  margin-bottom: calc(var(--space-text) * 0.25);
+  list-style: square;
+}

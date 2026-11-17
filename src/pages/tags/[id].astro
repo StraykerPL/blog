@@ -27,17 +27,24 @@ type Post = CollectionEntry<"blog">;
   title={("Posts tagged with " + tag) as string}
   description={(("Posts tagged with " + tag) as string) + "."}
 >
-  <h1>Posts tagged with {tag}</h1>
-  <ul>
-    {
-      posts.map((post: Post) => (
-        <li>
-          <span>
-            <FormattedDate date={post.data.pubDate} />
-          </span>
-          <a href={`${import.meta.env.BASE_URL}/posts/${post.id}`}>{post.data.title}</a>
-        </li>
-      ))
-    }
-  </ul>
+  <div class="tagged-posts">
+    <h1 class="tagged-posts__title">Posts tagged with {tag}</h1>
+    <ul class="tagged-posts__list">
+      {
+        posts.map((post: Post) => (
+          <li class="tagged-posts__item">
+            <span class="tagged-posts__date">
+              <FormattedDate date={post.data.pubDate} />
+            </span>
+            <a
+              class="tagged-posts__link"
+              href={`${import.meta.env.BASE_URL}/posts/${post.id}`}
+            >
+              {post.data.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </Base>

@@ -1,0 +1,153 @@
+:where(:root),
+:where(:host) {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-family: var(--font-family);
+  text-underline-offset: var(--text-underline-offset);
+  text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+  tab-size: 4;
+}
+
+a {
+  --text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  --font-weight: 700;
+}
+
+h1 {
+  --font-size: 2rem;
+  --line-height: 1.125;
+  --space-heading-top: 3rem;
+}
+
+h2 {
+  --font-size: 1.75rem;
+  --line-height: 1.15;
+  --space-heading-top: 2.625rem;
+}
+
+h3 {
+  --font-size: 1.5rem;
+  --line-height: 1.175;
+  --space-heading-top: 2.25rem;
+}
+
+h4 {
+  --font-size: 1.25rem;
+  --line-height: 1.2;
+  --space-heading-top: 1.874rem;
+}
+
+h5 {
+  --font-size: 1.125rem;
+  --line-height: 1.225;
+  --space-heading-top: 1.6875rem;
+}
+
+h6 {
+  --font-size: 1rem;
+  --line-height: 1.25;
+  --space-heading-top: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: var(--space-text);
+  color: var(--color-text);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-family: var(--font-family);
+}
+
+h1 {
+  --color-text: var(--h1-color);
+}
+
+h2 {
+  --color-text: var(--h2-color);
+}
+
+h3 {
+  --color-text: var(--h3-color);
+}
+
+h4 {
+  --color-text: var(--h4-color);
+}
+
+h5 {
+  --color-text: var(--h5-color);
+}
+
+h6 {
+  --color-text: var(--h6-color);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: var(--space-text);
+  color: var(--color-text);
+  font-style: normal;
+  font-weight: var(--font-weight);
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small {
+  --font-size: 0.875em;
+}
+
+::selection {
+  background-color: var(--color-selection);
+}
+
+:where(a:not([role="button"])),
+[role="link"] {
+  --color-text: var(--color-link);
+  --color-background: transparent;
+  --underline: var(--color-link-underline);
+  outline: none;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  text-decoration: var(--text-decoration);
+  text-decoration-color: var(--underline);
+  text-underline-offset: 0.125em;
+  transition:
+    background-color var(--transition),
+    color var(--transition),
+    text-decoration var(--transition),
+    box-shadow var(--transition);
+}
+:where(a:not([role="button"])):is(:hover, :active, :focus),
+[role="link"]:is(:hover, :active, :focus) {
+  --color-text: var(--color-link-hover);
+  --underline: var(--color-link-hover-underline);
+  --text-decoration: underline;
+}
+:where(a:not([role="button"])):focus-visible,
+[role="link"]:focus-visible {
+  box-shadow: 0 0 0 var(--outline-width) var(--color-link-focus);
+}

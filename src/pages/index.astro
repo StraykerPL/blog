@@ -4,16 +4,12 @@ import RecentPosts from "@components/RecentPosts.astro";
 ---
 
 <Base>
-  <article>
-    <header>
-      <h1>
-        Witaj na moim blogu!
-      </h1>
+  <article class="article home">
+    <header class="article__header">
+      <h1 class="article__title">Witaj na moim blogu!</h1>
     </header>
-    <p>
-      Sprawdź moje najnowsze posty poniżej.
-    </p>
+    <p class="home__description">Sprawdź moje najnowsze posty poniżej.</p>
   </article>
-  <hr />
+  <hr class="home__divider" />
   <RecentPosts />
 </Base>

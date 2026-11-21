@@ -47,4 +47,12 @@ const {
   <meta property="og:image:alt" content={siteConfig.og.imageAlt} />
   <meta property="og:image:width" content={siteConfig.og.imageWidth} />
   <meta property="og:image:height" content={siteConfig.og.imageHeight} />
+
+  {/* Google Analytics Tag */}
+  <script type="text/partytown" async src="https://www.googletagmanager.com/gtm.js?id=GTM-M3RG3J7C"></script>
+  <script type="text/partytown">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
 </head>
